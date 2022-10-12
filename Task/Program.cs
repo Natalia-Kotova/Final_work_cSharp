@@ -55,3 +55,16 @@ void PrintArray(string[] array)
     Console.Write($"{array[array.Length-1]}]");
     Console.WriteLine();
 }
+
+int size = Prompt("Введите размер будущего массива -> ");
+string[] array = new string[size];
+System.Console.WriteLine($"Заполните новый массив данными. Введите по очереди {size} слов / чисел и т.д. -> ");
+string[] filledArray = FillArray(array);
+System.Console.WriteLine();
+System.Console.WriteLine("Получившейся массив ->");
+PrintArray(filledArray);
+int sizeSortedArray = FindSizeArray(filledArray);
+string[] sortedArray = GetSortArray(filledArray, sizeSortedArray);
+System.Console.WriteLine();
+System.Console.WriteLine("Новый, отсортированный массив ->");
+PrintArray(sortedArray);
